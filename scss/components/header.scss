@@ -1,0 +1,50 @@
+@import '../base/color.scss';
+
+
+
+.header {
+
+    .navbar-color {
+        background-color: $color-primario;
+    }
+    .navbar {
+        .navbar-toggler {
+            border-color: $color-primario;
+        }
+    }
+
+    .logo {
+        width: 50%;
+        height: 55%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        @media only screen and (max-width: 991px) {
+            width: 35%;
+
+        }
+    }
+
+    .navbar-nav {
+
+        @media only screen and (max-width: 992px) {
+            background-color: $color-secundario;
+        }
+        
+        .nav-link {
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            color: #ffffff;
+
+            &:hover {
+                color: yellow;
+
+                @media only screen and (min-width: 992px) {
+                    transform: scale(1.1);
+                    transition: 5ms;
+                }
+            }
+        }
+    }
+}

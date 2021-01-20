@@ -1,0 +1,78 @@
+@import '../base/color.scss';
+
+footer {
+    width: 100%;
+    background-color: $color-negro;
+
+    .derechos {
+        color: white;
+
+        h6 {
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .correo {
+        a {
+            text-decoration: none;
+            color: white;
+
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+            @media only screen and (max-width:575px) {
+                font-size: 0.8rem;
+                
+            }
+
+            
+
+            .bi {
+                color: white;
+            }
+
+        }
+    }
+
+    .iconos {
+        a {
+            text-decoration: none;
+
+            .bi-facebook {
+                color: white;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: #3b5998;
+                    
+                }
+            }
+
+            .bi-instagram {
+                color: white;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: #E1306C;
+                }
+            }
+
+            .bi-twitter {
+                color: white;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: #00acee;
+                }
+            }
+        }
+
+
+    }
+}
