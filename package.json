@@ -1,11 +1,19 @@
 {
   "name": "entrega-final",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLMahon99/Entrega-4-coder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GLMahon99/Entrega-4-coder/issues"
+  },
+  "homepage": "https://github.com/GLMahon99/Entrega-4-coder#readme",
+  "description": ""
 }
