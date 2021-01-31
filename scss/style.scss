@@ -18,14 +18,19 @@ body {
         .btn-whatsapp {
             width: 50px;
             height: 50px;
-            bottom: 30px;
+            bottom: 50%;
             right: 30px;
             background-color: #0df053;
+            line-height: 50px;
             color: #fff;
-            text-align: center;
             font-size: 30px;
+            border-radius: 50px;
             box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
             z-index: 100;
+            .bi-whatsapp {
+                position: relative;
+                top: -5px;
+            }
             &:hover {
                 background-color: #fff;
                 color: #0df053;
