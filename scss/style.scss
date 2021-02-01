@@ -20,16 +20,7 @@
 }
 
 body {
-    position: relative;
-    top: 70px;
-    @media only screen and (max-width:576px) { 
-        position: relative;
-        top: 55px;  
-    }
-    @media only screen and (max-width:390px) { 
-        position: relative;
-        top: 95px;  
-    }
+    
     main {
         .btn-whatsapp {
             width: 50px;
