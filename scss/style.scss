@@ -1,10 +1,10 @@
 @import 'components/header.scss';
 @import 'components/inicio.scss';
 @import 'components/nosotros.scss';
-@import 'components/productos.scss';
+@import 'components/productos1.scss';
 @import 'components/footer.scss';
 @import 'components/encontranos.scss';
-
+@import 'components/iconos-de-uso.scss';
 %apariciones {
     animation-duration: 4s;
         animation-name: aparicion;
@@ -25,7 +25,7 @@ body {
         .btn-whatsapp {
             width: 50px;
             height: 50px;
-            bottom: 50%;
+            bottom: 15%;
             right: 30px;
             background-color: #0df053;
             line-height: 50px;

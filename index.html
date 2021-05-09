@@ -22,7 +22,8 @@
     <meta property="og:image" content="">
 
     <title>Earplugs tapones para oídos</title>
-
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -40,10 +41,10 @@
 <body>
     <!--NAVBAR-->
 
-    <div class="header row shadow">
+    <div class="header row shadow fixed-top">
         <div class="col-12">
             <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
-                <div class="container-fluid">
+                <div class="container-fluid ">
                     <a class="navbar-brand" href="#"><img class="logo" src="images/logo3.png" alt="logo-Earplugs"></a>
                     <a class="navbar-brand" href="#"><img class="logo-2" src="images/favicon.ico"
                             alt="logo-Earplugs-2"></a>
@@ -131,7 +132,7 @@
                         <img src="images/carrousel-splash.png" class="d-block w-100 ">
                         <div class="carousel-caption d-block">
                             <div>
-                                <img src="images/splash 2.png" class="img-carrousel-tapon"
+                                <img src="images/splash.png" class="img-carrousel-tapon"
                                     alt="tapones-para-oídos-earplugs-splash">
                             </div>
                             <div>
@@ -154,19 +155,57 @@
 
         <!--fin inicio-->
 
+        <!-- iconos de uso -->
+        <section id="iconos-de-uso" class="container py-5">
+            <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 container">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle"
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQ4MCA0ODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNjU5OTk5OTk5OTk5OTk5OSwwLDAsMC42NTk5OTk5OTk5OTk5OTk5LDgxLjU5OTk5OTk5OTk5OTk3LDgxLjU5OTk5OTk5OTk5OTk0KSI+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDU2LDIyNGMtMTQuMTMzLDAtMjQsNi4zMDEtMjQsMTUuMzJ2MjcuNTA1QzQxOS4zMzMsMjQxLjc5MywzOTkuODUsMjI0LDM3NiwyMjRIMTUyYy00LjQxNy0wLjAwMS03Ljk5OSwzLjU3OS04LDcuOTk2ICAgIGMwLDAuMDAxLDAsMC4wMDMsMCwwLjAwNHY0OC4wNjdjMC4wNDUtMTMuMDUyLTUuMjAxLTI2LjA3NS0xNS41ODYtMzUuNTgzYy0xOS41NTItMTcuOTAyLTQ5LjkxNS0xNi41NjQtNjcuODE2LDIuOTg5ICAgIGMtMTYuNzY0LDE4LjMwOS0xNi44MDEsNDYuMzgtMC4wODYsNjQuNzM0Yy00LjYxMiwwLjUwOC04Ljk2OCwyLjM4LTEyLjUxMiw1LjM3NVYxMTUuMTk5QzQ4LDEwNC40MzQsMzcuNDYxLDk2LDI0LDk2ICAgIHMtMjQsOC40MzQtMjQsMTkuMTk5djM0NS42MDJDMCw0NzEuNTY2LDEwLjUzOSw0ODAsMjQsNDgwczI0LTguNDM0LDI0LTE5LjE5OVY0MDhoMzg0djU2LjY4YzAsOS4wMTksOS44NjcsMTUuMzIsMjQsMTUuMzIgICAgczI0LTYuMzAxLDI0LTE1LjMyVjIzOS4zMkM0ODAsMjMwLjMwMSw0NzAuMTMzLDIyNCw0NTYsMjI0eiBNMzIsNDYwLjgwMWMtMC4wODYsMC42NTYtMi43NzMsMy4xOTktOCwzLjE5OSAgICBjLTUuMjUsMC03LjkyMi0yLjU0My04LTMuMTk5VjExNS4xOTljMC4wNzgtMC42NTYsMi43NS0zLjE5OSw4LTMuMTk5YzUuMjI3LDAsNy45MTQsMi41NDMsOCwzLjE5OVY0NjAuODAxeiBNMTYwLDI0MGgyMTYgICAgYzMwLjE3MiwwLDUzLjE3Miw0NC45MjYsNTUuNzU4LDg4SDE2MFYyNDB6IE0xNDQsMjgwLjA4M3YzOC41NmMtMy40NTItMy4zNTMtNy44NDgtNS41NjYtMTIuNTk3LTYuMzQyICAgIEMxMzkuNzkzLDMwMy4xMzcsMTQzLjk1NiwyOTEuNiwxNDQsMjgwLjA4M3ogTTk2LDI0OGMxNy42NzMsMCwzMiwxNC4zMjcsMzIsMzJjMCwxNy42NzMtMTQuMzI3LDMyLTMyLDMycy0zMi0xNC4zMjctMzItMzIgICAgQzY0LjAxOSwyNjIuMzM1LDc4LjMzNSwyNDguMDE5LDk2LDI0OHogTTQzMiwzOTJINDh2LTQ4LjAyM2M0LjE2My0wLjMyOCw3LjM3NC0zLjgwMSw3LjM3NS03Ljk3NyAgICBjLTAuMDc3LTQuMzMxLDMuMzY0LTcuOTA5LDcuNjk1LThoNjQuNjFjNC4zMzEsMC4wOTEsNy43NzIsMy42NjksNy42OTUsOGMtMC4wMDEsNC40MTcsMy41NzksNy45OTksNy45OTYsOCAgICBjMC4wMDEsMCwwLjAwMywwLDAuMDA0LDBINDMyVjM5MnogTTQ2NCw0NjIuNTk0Yy01LjE2OSwxLjg3NS0xMC44MzEsMS44NzUtMTYsMFYyNDEuNDA2YzUuMTY5LTEuODc1LDEwLjgzMS0xLjg3NSwxNiwwVjQ2Mi41OTR6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik0xMzcuMDc4LDE3NmwyOS4wNy0zNC44NzljMS45ODYtMi4zODYsMi40MTMtNS43MDUsMS4wOTQtOC41MTZjLTEuMzE2LTIuODEtNC4xMzktNC42MDUtNy4yNDItNC42MDVoLTQ4djE2aDMwLjkyMiAgICBsLTI5LjA3LDM0Ljg3OWMtMi44MjcsMy4zOTgtMi4zNjQsOC40NDQsMS4wMzQsMTEuMjdjMS40MzcsMS4xOTUsMy4yNDYsMS44NSw1LjExNCwxLjg1MWg0OHYtMTZIMTM3LjA3OHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTIyNC4zNTksMTM2bDQ1Ljk1My01OS4wOWMxLjg3Ny0yLjQxMSwyLjIxNy01LjY4MSwwLjg3NS04LjQyNmMtMS4zNDQtMi43NDMtNC4xMzItNC40ODMtNy4xODgtNC40ODRoLTY0djE2aDQ3LjY0MSAgICBsLTQ1Ljk1Myw1OS4wOWMtMi43MTQsMy40ODQtMi4wODksOC41MDksMS4zOTYsMTEuMjIzYzEuNDA1LDEuMDk0LDMuMTM2LDEuNjg4LDQuOTE3LDEuNjg4aDY0di0xNkgyMjQuMzU5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzI4LDk2bDYyLjM5OC04My4xOTljMi42NTItMy41MzMsMS45MzktOC41NDYtMS41OTQtMTEuMTk5QzM4Ny40MTksMC41NjIsMzg1LjczMywwLDM4NCwwaC03MnYxNmg1NmwtNjIuMzk4LDgzLjE5OSAgICBjLTEuODE4LDIuNDI0LTIuMTEyLDUuNjY4LTAuNzU4LDguMzc5QzMwNi4yLDExMC4yODgsMzA4Ljk3LDExMiwzMTIsMTEyaDgwVjk2SDMyOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" />
+                        <div class="card-body">
+                            <h6 class="text-center">Dormí mejor</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle"
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQ1LjE3MyA0NS4xNzMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPGc+CgkJCTxwYXRoIHN0eWxlPSIiIGQ9Ik0xNy4zODYsMjMuOTA3YzIuNjY0LDAuMzI5LDUuMTQ4LDEuMTc4LDcuNDUxLDIuMjQyYzEuMTE3LDAuNTIyLDIuMzEzLDEuMjA2LDMuMjUsMS43NCAgICAgYzAuOTM4LDAuNTUzLDEuODkxLDEuMDUyLDIuODU0LDEuNTM4bC01LjgzOC0xMS41NThsLTEuMjMzLTIuMTY4bC00LjM1Ny03LjYzM2MtMC42MTUtMS4wNzctMS45ODQtMS40NTItMy4wNjItMC44MzkgICAgIGMtMS4wODEsMC42MTgtMS40NTMsMS45ODctMC44MzcsMy4wNjRsNC44MTgsOC40NDhsLTEuMjMzLDEuMDk0bC03LjM2NSw0LjJsLTAuMTcsMC4wOTUgICAgIEMxMy41NjEsMjMuNzMxLDE1LjUyLDIzLjY3MiwxNy4zODYsMjMuOTA3eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAxMDAwMiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBzdHlsZT0iIiBkPSJNMzUuNjY5LDIzLjQzN2MyLjMyNi0xLjMyNywzLjEzNS00LjI5MSwxLjgxMS02LjYxNWMtMS4zMjYtMi4zMi00LjI4Ny0zLjEzMy02LjYxMi0xLjgwNiAgICAgYy0yLjMyMiwxLjMyNy0zLjE0LDQuMjkyLTEuODEyLDYuNjExQzMwLjM4LDIzLjk1NiwzMy4zNDksMjQuNzY0LDM1LjY2OSwyMy40Mzd6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDEwMDAyIiBjbGFzcz0iIj48L3BhdGg+CgkJCTxwYXRoIHN0eWxlPSIiIGQ9Ik00NC44NTMsMjcuMDU5Yy0wLjY4OCwyLjI4My0xLjc3NCw0LjQwMy0zLjMyMSw1LjQ5OGMtMS41MDUsMS4wOTYtMy4yMjIsMS4xNjQtNS4xMTEsMC43ODQgICAgIGMtMS44ODUtMC4zOTYtMy44NC0xLjIwMi01Ljc1NC0yLjE2N2MtMC45NjktMC40ODktMS45MjItMC45ODktMi44NjItMS41NDVjLTAuOTM3LTAuNTM0LTIuMTM2LTEuMjE3LTMuMjUzLTEuNzM5ICAgICBjLTIuMzAxLTEuMDYzLTQuNzg3LTEuOTE0LTcuNDUzLTIuMjQzYy0yLjY0NS0wLjMzMi01LjQ5MS0wLjExMy04LjA2LDAuOTA3Yy0yLjU3NSwxLjAwMy00Ljc1NywyLjc2NC02LjI2Nyw0LjgzNiAgICAgQzEuMjg3LDMzLjQ4NiwwLjI1OCwzNS44MDgsMCwzOC4yMzhjMi44ODctMy44MjIsNi41NjktNi41NjMsMTAuMzkxLTcuMjA1YzMuODEtMC42OTksNy43NzYsMC40NDksMTEuNjIyLDIuMjU4ICAgICBjMS4wMDIsMC40NTUsMS44NDYsMC45MTQsMi45NSwxLjUwNmMxLjExMSwwLjU1OSwyLjI0NiwxLjEwNCwzLjQxNCwxLjU1OWMyLjM0NiwwLjkwNCw0Ljg2OSwxLjY0Niw3LjY0OCwxLjY2NSAgICAgYzEuMzgxLDAuMDA0LDIuODQ2LTAuMTg4LDQuMjI5LTAuNzYxYzEuMzkzLTAuNTYsMi42MzktMS41NDgsMy40NDktMi43MzFDNDUuMjg3LDMyLjA5Nyw0NS40NTEsMjkuMzk3LDQ0Ljg1MywyNy4wNTl6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDEwMDAyIiBjbGFzcz0iIj48L3BhdGg+CgkJPC9nPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+                        <div class="card-body">
+                            <h6 class="text-center">Evitá el ingreso de agua a tu oído</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <img class="rounded-circle"
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDkzLjAzOCA5My4wMzgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHBhdGggZD0iTTQ2LjU0Nyw3NS41MjFjMCwxLjYzOS0wLjk0NywzLjEyOC0yLjQyOSwzLjgyM2MtMC41NzMsMC4yNzEtMS4xODcsMC40MDItMS43OTcsMC40MDJjLTAuOTY2LDAtMS45MjMtMC4zMzItMi42OTYtMC45NzMgICBsLTIzLjA5OC0xOS4xNEg0LjIyNUMxLjg5Miw1OS42MzUsMCw1Ny43NDIsMCw1NS40MDlWMzguNTc2YzAtMi4zMzQsMS44OTItNC4yMjYsNC4yMjUtNC4yMjZoMTIuMzAzbDIzLjA5OC0xOS4xNCAgIGMxLjI2Mi0xLjA0NiwzLjAxMi0xLjI2OSw0LjQ5My0wLjU2OWMxLjQ4MSwwLjY5NSwyLjQyOSwyLjE4NSwyLjQyOSwzLjgyM0w0Ni41NDcsNzUuNTIxTDQ2LjU0Nyw3NS41MjF6IE02Mi43ODQsNjguOTE5ICAgYy0wLjEwMywwLjAwNy0wLjIwMiwwLjAxMS0wLjMwNCwwLjAxMWMtMS4xMTYsMC0yLjE5Mi0wLjQ0MS0yLjk4Ny0xLjIzN2wtMC41NjUtMC41NjdjLTEuNDgyLTEuNDc5LTEuNjU2LTMuODIyLTAuNDA4LTUuNTA0ICAgYzMuMTY0LTQuMjY2LDQuODM0LTkuMzIzLDQuODM0LTE0LjYyOGMwLTUuNzA2LTEuODk2LTExLjA1OC01LjQ4NC0xNS40NzhjLTEuMzY2LTEuNjgtMS4yNC00LjEyLDAuMjkxLTUuNjVsMC41NjQtMC41NjUgICBjMC44NDQtMC44NDQsMS45NzUtMS4zMDQsMy4xOTktMS4yMzFjMS4xOTIsMC4wNiwyLjMwNSwwLjYyMSwzLjA2MSwxLjU0NWM0Ljk3Nyw2LjA5LDcuNjA2LDEzLjQ4NCw3LjYwNiwyMS4zOCAgIGMwLDcuMzU0LTIuMzI1LDE0LjM1NC02LjcyNSwyMC4yNEM2NS4xMzEsNjguMjE2LDY0LjAwNyw2OC44MzIsNjIuNzg0LDY4LjkxOXogTTgwLjI1Miw4MS45NzYgICBjLTAuNzY0LDAuOTAzLTEuODY5LDEuNDQ1LTMuMDUyLDEuNDk1Yy0wLjA1OCwwLjAwMi0wLjExNywwLjAwNC0wLjE3NywwLjAwNGMtMS4xMTksMC0yLjE5My0wLjQ0Mi0yLjk4OC0xLjIzN2wtMC41NTUtMC41NTUgICBjLTEuNTUxLTEuNTUtMS42NTYtNC4wMjktMC4yNDYtNS43MDdjNi44MTQtOC4xMDQsMTAuNTY4LTE4LjM5NiwxMC41NjgtMjguOTgyYzAtMTEuMDExLTQuMDE5LTIxLjYxMS0xMS4zMTQtMjkuODQ3ICAgYy0xLjQ3OS0xLjY3Mi0xLjQwNC00LjIwMywwLjE3LTUuNzgzbDAuNTU0LTAuNTU1YzAuODIyLTAuODI2LDEuODktMS4yODEsMy4xMTUtMS4yNDJjMS4xNjMsMC4wMzMsMi4yNjMsMC41NDcsMy4wMzYsMS40MTcgICBjOC44MTgsOS45MjgsMTMuNjc1LDIyLjcxOCwxMy42NzUsMzYuMDFDOTMuMDQsNTkuNzgzLDg4LjQ5OSw3Mi4yMDcsODAuMjUyLDgxLjk3NnoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" />
+                        <div class="card-body">
+                            <h6 class="text-center">Reduce esos ruidos molestos</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--fin iconos de uso -->
+
         <!--nosotros-->
-        <section class="seccion-nosotros container-fluid p-3" id="section-nosotros">
-            <div class="container">
-                <h1 class="encabezado-nosotros">EarplugsTJM </h1>
-                <p class="text-nosotros">Somos una empresa que se dedica a la fabricacion de protectores auditivos, con
-                    mas de 15 años en el mercado.
-                    Nuestros tapones para oídos son de la mas alta calidad, ayudando a dormir y evitar infecciones en
-                    los oídos en las personas que los utilizan.
-                    Actualmente contamos con seis diferentes productos los cuales mejoran su experiencia al dormir,
-                    nadar, ducharse, reducir esos molestos ronquidos, estudiar, practicar deportes de tiro, viajar,
-                    molestias al volar y conciertos ruidosos.
-                    EarplugsTJM es la marca nº1 de tapones para oídos en Argentina y la más recomendada por médicos.
-                </p>
+        <section class="seccion-nosotros container-fluid d-flex align-items-end " id="section-nosotros">
+            <div class="container ">
+                    <h1 class="encabezado-nosotros mt-5">EarplugsTJM </h1>
+                    <p class="text-nosotros">Somos una empresa que se dedica a la fabricación de protectores auditivos,
+                        con
+                        más de 15 años en el mercado.
+                        Nuestros tapones para oídos son de la más alta calidad, ayudando a dormir y evitando infecciones
+                        en
+                        los oídos en las personas que los utilizan.
+                        Actualmente contamos con seis diferentes productos los cuales mejoran su experiencia al dormir,
+                        reduciendo esos molestos ronquidos,
+                        nadar, ducharse, estudiar, practicar deportes de tiro, viajar,molestias al volar y conciertos
+                        ruidosos.
+                        EarplugsTJM es la marca nº1 de tapones para oídos en Argentina y la más recomendada por médicos.
+                    </p>
             </div>
         </section>
 
@@ -175,222 +214,128 @@
         <!--productos-->
 
         <section class="seccion-productos pb-5" id="section-productos">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 my-5">
-                        <h2 class="d-flex justify-content-center align-items-center titulo-seccion">PRODUCTOS</h2>
+            <div class="carrito d-flex justify-content-end ">
+
+                <table class="table table-dark">
+            
+                  <thead class="">
+                    <tr>
+                      <th class="text-start" scope="col"><i class="bi bi-cart2"></i></th>
+                      <th class="text-start" scope="col"></th>
+                      <th class="text-start" scope="col"></th>
+                      <th class="text-start" scope="col"></th>
+            
+                    </tr>
+                    <tr>
+                      <th class="text-center " scope="col">Producto</th>
+                      <th class="text-center " scope="col">Cantidad</th>
+                      <th class="text-center  " scope="col"></th>
+                      <th class="text-center " scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="items"></tbody>
+                  <tfoot>
+                    <tr id="footer">
+                      <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <section class="container productos">
+                <h4 class="container d-flex justify-content-center titulo-seccion-producto">PRODUCTOS</h4>
+                <div class="row" id="cards"></div>
+              </section>
+            
+            
+              <template id="template-footer">
+            
+                <th scope="row" colspan="2" class="d-flex flex-wrap">Total productos</th>
+                <td class="text-center">10</td>
+                <td>
+                  <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                    vaciar todo
+                  </button>
+                </td>
+                <td class="font-weight-bold">$<span>5000</span></td>
+            
+            
+            
+            
+              </template>
+            
+              <template id="template-carrito">
+                <tr>
+                  <th class="text-center fuente-carrito" scope="row">id</th>
+                  <td class="text-center fuente-carrito">1</td>
+                  <td class="d-flex justify-content-center">
+                    <button class="btn btn-outline-primary btn-suma-resta mx-1">
+                      +
+                    </button>
+                    <button class="btn btn-outline-secondary btn-suma-resta mx-1">
+                      -
+                    </button>
+                  </td>
+                  <td class="text-center fuente-carrito">$<span>500</span></td>
+                </tr>
+              </template>
+            
+              <template id="template-card">
+                <div class="col-12 col-md-6 col-lg-4 mb-2">
+                  <div class="card m-2">
+                    <div class="container-fluid fondo-titulo">
+                    <h5 class="titulo-producto text-center mx-4  aling-item-center">Titulo</h5>
+                  </div>
+                    <div class="row row-cols-2">
+                      <div class="col">
+                        <p class=" aling-item-center text-center sub-titulo">Precio</p>
+                      </div>
+                      <div class="col">
+                        <p class="col aling-item-center text-center  sub-titulo">Código</p>
+                      </div>
+            
+            
                     </div>
+                    <div class="row row-cols-2 contenedor-cod-precio">
+                      <div class="col">
+                        <p class=" aling-item-center text-center resultado-sub-titulo">precio</p>
+                      </div>
+                      <div class="col">
+                        <p class="col aling-item-center text-center resultado-sub-titulo ">codigo</p>
+                      </div>
+            
+            
+                    </div>
+            
+            
+                    </ul>
+                    <div class="card-body">
+                      <img src="" alt="" class="card-img-top">
+                      <button type="button" class="btnDetalle btn btn-light">detalle</button>
+                      <div class="detalle">
+                        
+                        <ul class="mt-5 container-fluid  list-group list-group-flush  ">
+                          <li class="list-group-item ">
+                            <p class="item-carac"></p>
+                          </li>
+                          <li class=" list-group-item ">
+                            <p class="item-carac"></p>
+                          </li>
+                          <li class=" list-group-item ">
+                            <p class="item-carac"></p>
+                          </li>
+                          <li class="list-group-item ">
+                            <p class="item-carac"></p>
+                          </li>
+                          <li class=" list-group-item ">
+                            <p class="item-carac"></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="btn btn-color">Comprar</button>
+                  </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3">
-                    <div class="col">
-                        <div class="card d-flex m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 01</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-
-                                <img src="images/inc.png" alt="tapones-para-oídos-earplugs-silicona-moldeable-incoloros"
-                                    class="d-block img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Silicona Hipoalergénica Moldeable Incolora</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="mb-1">
-                                            <p class="item-carac">Se adaptan cómodamente al oído.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Mejoran notablemente la calidad de horas de sueño,
-                                                aislando los ruidos molestos.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen del ingreso de agua al conducto auditivo.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Reducen 22 decibeles.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Incluye estuche para su almacenamiento.</p>
-                                        </li>
-                                        </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 02</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-                                <img src="images/fluo.png" alt="tapones-para-oídos-earplugs-silicona-moldeable-fluo"
-                                    class="img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Silicona Hipoalergénica Moldeable Fluo</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="mb-1">
-                                            <p class="item-carac">Se adaptan cómodamente al oído.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Mejoran notablemente la calidad de horas de sueño,
-                                                aislando los ruidos molestos.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen del ingreso de agua al conducto auditivo.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Reducen 22 decibeles.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Incluye estuche para su almacenamiento.</p>
-                                        </li>
-                                        </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col">
-                        <div class="card m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 05</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-                                <img src="images/nude.png" alt="tapones-para-oídos-earplugs-silicona-moldeable-nude"
-                                    class="img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Silicona Hipoalergénica Moldeable Nude</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="mb-1">
-                                            <p class="item-carac">Se adaptan cómodamente al oído. Máxima adherencia.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Mejoran notablemente la calidad de horas de sueño,
-                                                aislando los ruidos molestos.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen del ingreso de agua al conducto auditivo.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Reducen 22 decibeles.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Incluye estuche para su almacenamiento.</p>
-                                        </li>
-                                        </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 03</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-                                <img src="images/soft.png" alt="tapones-para-oídos-earplugs-soft" class="img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Goma Soft Expandible</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen de ruidos molestos, transito vehicular,
-                                                música, máquinas, etc.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Reducen 29 decibeles.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Se ajustan sellando el canal auditivo.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Tapones con cordón.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Incluye estuche para su almacenamiento.</p>
-                                        </li>
-                                        </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 04</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-                                <img src="images/vulcan.png" alt="tapones-para-oídos-earplugs-vulcanizados"
-                                    class="img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Silicona Vulcanizada Hipoalergénica</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen de ruidos molestos, transito vehicular,
-                                                música, máquinas, etc.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Protegen del ingreso de agua al conducto auditivo.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Reducen 26 decibeles.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Tapones con cordón.</p>
-                                        </li>
-                                        <li class="mb-1">
-                                            <p class="item-carac">Se adaptan cómodamente al oído. Máxima adherencia.</p>
-                                        </li>
-                                        </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card m-4 tarjeta-style pb-3">
-                            <div class="d-flex align-items-start d-flex justify-content-end">
-                                <p class="px-2 cod-producto">TPE 06</p>
-                            </div>
-
-                            <div class="card-body d-flex  justify-content-center align-items-center py-4">
-                                <img src="images/splash 2.png" alt="tapones-para-oídos-earplugs-splash"
-                                    class="img-producto">
-                                <div class="card-text">
-                                    <h5 class="text-center">Silicona Hipoalergénica Moldeable SPLASH</h5>
-                                    <ul class="mt-5 text-start">
-                                        <li class="">
-                                            <p class="item-carac">Se adaptan cómodamente al oído. Máxima adherencia.</p>
-                                        </li>
-                                        <li class="">
-                                            <p class="item-carac">Protegen del ingreso de agua al conducto auditivo.
-                                                Ayudan a prevenir infecciones.</p>
-                                        </li>
-                                        <li class="">
-                                            <p class="item-carac">Ideal para deportes acuáticos. Para uso en pileta,
-                                                playa y ducha.</p>
-                                        </li>
-                                        <li class="">
-                                            <p class="item-carac">Incluye estuche para su almacenamiento.</p>
-                                        </li>
-                                        <li class="">
-                                            <p class="item-carac">Su color amarillo fluo permite localizarlos fácilmente
-                                                en caso de extravío.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+              </template>
         </section>
 
         <!--fin productos-->
@@ -528,7 +473,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
     </script>
-
+    <script src="app.js"></script>
 </body>
 
 </html>

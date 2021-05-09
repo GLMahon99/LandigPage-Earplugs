@@ -1,0 +1,87 @@
+@import '../base/color.scss';
+
+.seccion-productos{
+  padding-top: 100px;
+  background-color: rgb(241, 241, 241);
+  .btn-color {
+    background-color: $color-primario;
+    color: white;
+}
+
+
+
+.card {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 7px;
+    .fondo-titulo{
+        background-color: $color-primario;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+    .titulo-producto {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        font-size: 15px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .sub-titulo {
+        color: $color-primario;
+        font-weight: bolder;
+    }
+    .resultado-sub-titulo {
+        color: $color-secundario;
+        font-weight: lighter;
+        border-bottom: solid 1px rgb(187, 185, 185);
+        padding-bottom: 4px;
+    }
+    
+    
+        
+    
+    
+}
+.titulo-seccion-producto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: $color-secundario;
+    font-style: italic;
+}
+
+@media only screen and (max-width:992px) {
+    .titulo-seccion-producto {
+        font-size: 2rem;
+    }
+      
+}
+
+
+
+.carrito {
+    z-index: 1000;
+    position: fixed;
+    flex-wrap: wrap;
+    right: 0;
+    top: 7%;
+
+    #vaciar-carrito{
+        padding: 1px;
+    }
+    .btn-suma-resta{
+        padding: 2px;
+    }
+    .table{
+        width: 85%;
+    }
+    .bi-cart2{
+        font-size: 2rem;
+        
+    }
+    
+}
+}
+

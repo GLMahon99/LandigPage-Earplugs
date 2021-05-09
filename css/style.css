@@ -142,160 +142,175 @@
 
 .seccion-nosotros {
   color: #ffffff;
-  text-indent: 10px;
-  line-height: 30px;
-  background-color: #c4c3c3;
-  -webkit-box-shadow: inset 0px 0px 10px 0px #444444;
-  -moz-box-shadow: inset 0px 0px 10px 0px #444444;
-  box-shadow: inset 0px 0px 10px 0px #444444;
+  background-image: url("../images/fondo-nosotros.png");
+  background-position: 100%;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
-
-.seccion-productos {
-  background-color: rgba(241, 240, 240, 0.89);
-}
-.seccion-productos .titulo-seccion {
-  font-size: 3rem;
-  color: #2345BC;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-weight: bold;
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .seccion-productos .titulo-seccion {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .seccion-productos .titulo-seccion {
-    font-size: 2rem;
-  }
-}
-.seccion-productos .tarjeta-style {
-  transition: 0.3s;
-  border: 2px, solid, gray;
-  border-radius: 22px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.seccion-productos .tarjeta-style .cod-producto {
-  background-color: #2345BC;
-  border-bottom-left-radius: 10px;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  border-top-right-radius: 10px;
-  z-index: 300;
-}
-.seccion-productos .tarjeta-style:hover {
-  transform: scale(1.15);
-  transition: 0.5s;
-}
-.seccion-productos .tarjeta-style .card-body .card-text {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: black, 0.5;
-  display: none;
-  text-align: center;
-}
-.seccion-productos .tarjeta-style .card-body .card-text h5 {
+.seccion-nosotros .container {
   position: relative;
   top: 30px;
-  color: #2345BC;
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1400px) {
-  .seccion-productos .tarjeta-style .card-body .card-text h5 {
+.seccion-nosotros .container h1 {
+  margin-top: 20px;
+  font-size: 5rem;
+}
+.seccion-nosotros .container p {
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1220px) {
+  .seccion-nosotros {
+    color: #ffffff;
+    background-image: url("../images/fondo-nosotros.png");
+    background-position: 80%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .seccion-nosotros .container {
+    position: relative;
+    top: 30px;
+  }
+  .seccion-nosotros .container h1 {
+    margin-top: 20px;
+    font-size: 4rem;
+  }
+  .seccion-nosotros .container p {
+    margin-top: 60px;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .seccion-nosotros {
+    color: #ffffff;
+    background-image: url("../images/fondo-nosotros.png");
+    background-position: 75%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .seccion-nosotros .container {
+    position: relative;
+    top: 30px;
+  }
+  .seccion-nosotros .container h1 {
+    margin-top: 20px;
+    font-size: 4rem;
+  }
+  .seccion-nosotros .container p {
+    margin-top: 60px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .seccion-nosotros {
+    color: #ffffff;
+    background-image: url("../images/fondo-nosotros.png");
+    background-position: 75%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .seccion-nosotros .container {
+    position: relative;
+    top: 52px;
+  }
+  .seccion-nosotros .container h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+  }
+  .seccion-nosotros .container p {
+    margin-top: 50px;
     font-size: 13px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .seccion-productos .tarjeta-style .card-body .card-text h5 {
-    font-size: 18px;
+@media only screen and (max-width: 576px) {
+  .seccion-nosotros {
+    color: #ffffff;
+    background-image: url("../images/fondo-nosotros.png");
+    background-position: 75%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .seccion-nosotros .container {
+    position: relative;
+    top: 70px;
+  }
+  .seccion-nosotros .container h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  .seccion-nosotros .container p {
+    margin-top: 30px;
+    font-size: 12px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .seccion-productos .tarjeta-style .card-body .card-text h5 {
-    font-size: 11px;
-  }
+.seccion-productos {
+  padding-top: 100px;
+  background-color: #f1f1f1;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .seccion-productos .tarjeta-style .card-body .card-text h5 {
-    font-size: 18px;
-  }
+.seccion-productos .btn-color {
+  background-color: #2345BC;
+  color: white;
 }
-@media only screen and (max-width: 575px) {
-  .seccion-productos .tarjeta-style .card-body .card-text h5 {
-    font-size: 10px;
-  }
+.seccion-productos .card {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 7px;
 }
-.seccion-productos .tarjeta-style .card-body .card-text ul {
-  color: #2345BC;
+.seccion-productos .card .fondo-titulo {
+  background-color: #2345BC;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
-.seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-  color: #2345BC;
-  font-size: 13px;
+.seccion-productos .card .titulo-producto {
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-size: 15px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+.seccion-productos .card .sub-titulo {
+  color: #2345BC;
   font-weight: bolder;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1400px) {
-  .seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-    font-size: 9px;
-  }
+.seccion-productos .card .resultado-sub-titulo {
+  color: #264cd3;
+  font-weight: lighter;
+  border-bottom: solid 1px #bbb9b9;
+  padding-bottom: 4px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-    font-size: 13px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-    font-size: 9px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-    font-size: 13px;
-    margin-bottom: 2rem;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .seccion-productos .tarjeta-style .card-body .card-text ul li .item-carac {
-    font-size: 8px;
-  }
-}
-.seccion-productos .tarjeta-style:hover .card-text {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.753);
-  border-radius: 5%;
-  animation-duration: 2s;
-  animation-name: aparecer;
-}
-@keyframes aparecer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.seccion-productos .tarjeta-style .img-producto {
-  width: 85%;
-  margin: 0 !important;
-}
-.seccion-productos .tarjeta-style div {
-  flex-wrap: wrap;
-}
-.seccion-productos .tarjeta-style div .cod-producto {
+.seccion-productos .titulo-seccion-producto {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  background-color: #2345BC;
-  color: #fff;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border: 2px, solid, gray;
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #264cd3;
+  font-style: italic;
+}
+@media only screen and (max-width: 992px) {
+  .seccion-productos .titulo-seccion-producto {
+    font-size: 2rem;
+  }
+}
+.seccion-productos .carrito {
+  z-index: 1000;
+  position: fixed;
+  flex-wrap: wrap;
+  right: 0;
+  top: 7%;
+}
+.seccion-productos .carrito #vaciar-carrito {
+  padding: 1px;
+}
+.seccion-productos .carrito .btn-suma-resta {
+  padding: 2px;
+}
+.seccion-productos .carrito .table {
+  width: 85%;
+}
+.seccion-productos .carrito .bi-cart2 {
+  font-size: 2rem;
 }
 
 footer {
@@ -417,6 +432,16 @@ footer .iconos a .bi-twitter:hover {
   width: 250px;
 }
 
+#iconos-de-uso .card {
+  border: none;
+}
+#iconos-de-uso img {
+  width: 40%;
+  background-color: lightgray;
+  color: white;
+  padding: 15px;
+}
+
 .seccion-inicio .img-carrousel-tapon, .seccion-inicio .img-carrousel-tapon-2 {
   animation-duration: 4s;
   animation-name: aparicion;
@@ -433,7 +458,7 @@ footer .iconos a .bi-twitter:hover {
 body main .btn-whatsapp {
   width: 50px;
   height: 50px;
-  bottom: 50%;
+  bottom: 15%;
   right: 30px;
   background-color: #0df053;
   line-height: 50px;
